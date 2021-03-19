@@ -1,8 +1,8 @@
 using Microsoft.AspNetCore.Mvc;
-using Sillystringz.Models;
+using Factory.Models;
 using System.Collections.Generic;
 
-namespace Sillystringz.Controllers
+namespace Factory.Controllers
 {
   public class HomeController : Controller
   {

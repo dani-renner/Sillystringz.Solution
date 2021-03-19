@@ -4,9 +4,9 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using Sillystringz.Models;
+using Factory.Models;
 
-namespace Sillystringz
+namespace Factory
 {
   public class Startup
   {
@@ -25,7 +25,7 @@ namespace Sillystringz
       services.AddMvc();
 
       services.AddEntityFrameworkMySql()
-        .AddDbContext<SillystringzContext>(options => options
+        .AddDbContext<FactoryContext>(options => options
         .UseMySql(Configuration["ConnectionStrings:DefaultConnection"], ServerVersion.AutoDetect(Configuration["ConnectionStrings:DefaultConnection"])));
     }
 
