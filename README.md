@@ -22,7 +22,7 @@ _This application allows a database to hold engineers and machines. This way, th
 
 * You can clone the repository to your desktop
 * Open a SQL command line in a terminal. Copy and paste the contents of dani_renner.sql and hit enter.
-* Navigate to the Sillystringz directory
+* Navigate to the Factory directory
 * Navigate to the HairSalon directory
 * Add a file called appsettings.json. In that file, you will need to add the following code:
 {
