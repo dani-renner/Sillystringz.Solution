@@ -28,7 +28,7 @@ namespace Factory.Migrations
                         .Annotation("MySql:ValueGenerationStrategy", MySqlValueGenerationStrategy.IdentityColumn),
                     Name = table.Column<string>(type: "longtext CHARACTER SET utf8mb4", nullable: true),
                     Description = table.Column<string>(type: "longtext CHARACTER SET utf8mb4", nullable: true),
-                    EngineerId = table.Column<int>(type: "int", nullable: false)
+                    EngineerId = table.Column<int>(type: "int", nullable: true)
                 },
                 constraints: table =>
                 {
@@ -38,7 +38,7 @@ namespace Factory.Migrations
                         column: x => x.EngineerId,
                         principalTable: "Engineers",
                         principalColumn: "EngineerId",
-                        onDelete: ReferentialAction.Cascade);
+                        onDelete: ReferentialAction.Restrict);
                 });
 
             migrationBuilder.CreateTable(
