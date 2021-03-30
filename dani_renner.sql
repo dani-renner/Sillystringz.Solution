@@ -14,20 +14,17 @@ CREATE TABLE `engineermachine` (
   KEY `IX_EngineerMachine_MachineId` (`MachineId`),
   CONSTRAINT `FK_EngineerMachine_Engineers_EngineerId` FOREIGN KEY (`EngineerId`) REFERENCES `engineers` (`EngineerId`) ON DELETE CASCADE,
   CONSTRAINT `FK_EngineerMachine_Machines_MachineId` FOREIGN KEY (`MachineId`) REFERENCES `machines` (`MachineId`) ON DELETE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 DROP TABLE IF EXISTS `engineers`;
 CREATE TABLE `engineers` (
   `EngineerId` int NOT NULL AUTO_INCREMENT,
   `Name` longtext CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci,
   PRIMARY KEY (`EngineerId`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 DROP TABLE IF EXISTS `machines`;
 CREATE TABLE `machines` (
   `MachineId` int NOT NULL AUTO_INCREMENT,
   `Name` longtext CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci,
   `Description` longtext CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci,
-  `EngineerId` int DEFAULT NULL,
-  PRIMARY KEY (`MachineId`),
-  KEY `IX_Machines_EngineerId` (`EngineerId`),
-  CONSTRAINT `FK_Machines_Engineers_EngineerId` FOREIGN KEY (`EngineerId`) REFERENCES `engineers` (`EngineerId`) ON DELETE RESTRICT
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+  PRIMARY KEY (`MachineId`)
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
