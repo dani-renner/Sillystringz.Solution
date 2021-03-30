@@ -11,6 +11,8 @@
 {
   <p>This engineer hasn't been trained on any machines yet.</p>
 }
+else
+{
   <h4>Machines this engineer is licensed to operate: </h4>
   @foreach(var join in @Model.JoinEntities)
   {
@@ -22,6 +24,7 @@
     }
     </li>
   }
+}
 </ul>
 <p>@Html.ActionLink("Add Machine", "Create", "Machine")</p>
 <p>@Html.ActionLink("Back to Engineers", "Index")</p>
