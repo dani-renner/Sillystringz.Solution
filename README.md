@@ -37,7 +37,8 @@ _This application allows a many-to-many database relationship to hold engineers 
 2. Quit out of SQL with Ctrl + c
 #### OR Using .NET
 1. In the terminal, navigate to the Factory directory
-2. Enter "dotnet ef database update"
+2. Enter "dotnet ef migrations add Initial"
+3. Enter "dotnet ef database update"
 ### Running the program
 * From the Factory directory, Enter "dotnet run" in the terminal and hit enter to start a local host. 
 * Ctrl + click the link that populates in the terminal to view the application in the webpage. It is probably http://localhost:5000/
