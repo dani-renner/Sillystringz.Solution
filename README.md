@@ -35,7 +35,7 @@ _This application allows a many-to-many database relationship to hold engineers 
 #### Using SQL
 1. Open a SQL command line in a terminal. Copy and paste the contents of dani_renner.sql and hit enter.
 2. Quit out of SQL with Ctrl + c
-#### OR Using .NET
+#### OR Using Entity
 1. In the terminal, navigate to the Factory directory
 2. Enter "dotnet ef database update"
 ### Running the program
